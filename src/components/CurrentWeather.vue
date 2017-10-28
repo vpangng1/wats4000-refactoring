@@ -17,7 +17,7 @@
           <dt>Current Temp</dt>
           <dd>{{ weatherData.main.temp }}&deg;F</dd>
           <dt>Humidity</dt>
-          <dd>{{ weatherData.main.humidity }}</dd>
+          <dd>{{ weatherData.main.humidity }}%</dd>
           <dt>High</dt>
           <dd>{{ weatherData.main.temp_max }}&deg;F</dd>
           <dt>Low</dt>

@@ -1,9 +1,8 @@
+<!--TODO: Delete this file. It was experimental -->
 <template>
   <div>
-    <h2>City Search</h2>
-    <form v-on:submit.prevent="getCities">
-        <p>Enter city name: <input type="text" v-model="query" placeholder="Paris, TX"> <button type="submit">Go</button></p>
-    </form>
+    <h2>Test Search</h2>
+
     <ul class="cities" v-if="results && results.list.length > 0">
         <li v-for="city in results.list">
             <h2>{{ city.name }}, {{ city.sys.country }}</h2>
@@ -41,23 +40,7 @@ export default {
       errors: [],
       query: ''
     }
-  },
-  methods: {
-    getCities: function () {
-      axios.get('//api.openweathermap.org/data/2.5/find', {
-        params: {
-            q: this.query,
-            units: 'imperial',
-            APPID: 'YOUR_APPID_HERE'
-        }
-      })
-      .then(response => {
-        this.results = response.data
-      })
-      .catch(error => {
-        this.errors.push(error)
-      });
-    }
+  }
   }
 }
 </script>

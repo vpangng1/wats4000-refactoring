@@ -18,7 +18,7 @@
         </p>
         <dl class="current-weather">
             <dt>Humidity</dt>
-            <dd>{{ forecast.main.humidity }}</dd>
+            <dd>{{ forecast.main.humidity }}%</dd>
             <dt>High</dt>
             <dd>{{ forecast.main.temp_max }}&deg;F</dd>
             <dt>Low</dt>
