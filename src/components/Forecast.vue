@@ -51,7 +51,7 @@ export default {
     }
   },
   created () {
-    axios.get('http://api.openweathermap.org/data/2.5/forecast', {
+    axios.get('//api.openweathermap.org/data/2.5/forecast', {
       params: {
           id: this.$route.params.cityId,
           units: 'imperial',

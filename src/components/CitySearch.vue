@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     getCities: function () {
-      axios.get('http://api.openweathermap.org/data/2.5/find', {
+      axios.get('//api.openweathermap.org/data/2.5/find', {
         params: {
             q: this.query,
             units: 'imperial',
