@@ -34,9 +34,6 @@
         <li v-for="error in errors">{{ error }}</li>
       </ul>
     </div>
-    <div v-else>
-      <h2>Loading...</h2>
-    </div>
   </div>
 </template>
 
