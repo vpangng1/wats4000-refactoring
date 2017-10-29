@@ -33,8 +33,8 @@ the application in the future.
 * Paste your API Key (which will be used as the `APPID` parameter) into the appropriate locations in the `CitySearch.vue`, `CurrentWeather.vue`, and `Forecast.vue` files.
 * Verify the site works with your key. You should be able to search for a city and see weather data.
 * Abstract the base configuration for the API requests to a common file to reduce duplication of the base URL and `APPID`.
-* Create a child component called `WeatherDisplay` that can accept weather information and produce a well-formatted display.
-* Use the child component in each of the views to eliminate the redundant HTML and CSS styles used.
+* Create child components that can accept weather information and produce a well-formatted display.
+* Use the child components in each of the views to eliminate the redundant HTML and CSS styles used.
 * Create a child component called `ErrorList` to handle display of error messages. Replace the error message handling in the templates of the three parent components with this child component.
 * Clean up any extraneous code, comments, or files that are unused.
 * Add comments where they would be helpful to improve the readability of the project.
