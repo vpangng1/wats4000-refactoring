@@ -70,6 +70,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.errors li {
+  color: red;
+  border: solid red 1px;
+  padding: 5px;
+}
 h1, h2 {
   font-weight: normal;
 }
