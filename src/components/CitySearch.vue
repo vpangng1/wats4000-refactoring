@@ -8,14 +8,12 @@
         <li v-for="city in results.list">
             <h2>{{ city.name }}, {{ city.sys.country }}</h2>
             <p><router-link v-bind:to="{ name: 'CurrentWeather', params: { cityId: city.id } }">View Current Weather</router-link></p>
-            <p v-for="weatherSummary in city.weather">
+            <div v-for="weatherSummary in city.weather" class="weatherSummary">
                 <img v-bind:src="'http://openweathermap.org/img/w/' + weatherSummary.icon + '.png'" v-bind:alt="weatherSummary.main">
                 <br>
                 <b>{{ weatherSummary.main }}</b>
-                <br>
-                {{ weatherSummary.description }}
-            </p>
-            <dl class="current-weather">
+            </div>
+            <dl>
                 <dt>Current Temp</dt>
                 <dd>{{ city.main.temp }}&deg;F</dd>
                 <dt>Humidity</dt>
@@ -74,11 +72,34 @@ ul {
 }
 li {
   display: inline-block;
-  width: 15%;
+  width: 300px;
   min-height: 300px;
   border: solid 1px #e8e8e8;
   padding: 10px;
   margin: 5px;
+}
+.weatherSummary {
+  display: inline-block;
+  width: 100px;
+}
+dl {
+  padding: 5px;
+  background: #e8e8e8;
+}
+dt {
+  float: left;
+  clear: left;
+  width: 120px;
+  text-align: right;
+  font-weight: bold;
+  color: blue;
+}
+dd {
+  margin: 0 0 0 130px;
+  padding: 0 0 0.5em 0;
+}
+dt::after {
+  content: ":";
 }
 
 a {

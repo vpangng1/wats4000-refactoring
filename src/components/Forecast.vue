@@ -9,14 +9,12 @@
     <ul v-if="weatherData && errors.length===0" class="forecast">
       <li v-for="forecast in weatherData.list">
         <h3>{{ forecast.dt|formatDate }}</h3>
-        <p v-for="weatherSummary in forecast.weather">
+        <div v-for="weatherSummary in forecast.weather" class="weatherSummary">
             <img v-bind:src="'http://openweathermap.org/img/w/' + weatherSummary.icon + '.png'" v-bind:alt="weatherSummary.main">
             <br>
             <b>{{ weatherSummary.main }}</b>
-            <br>
-            {{ weatherSummary.description }}
-        </p>
-        <dl class="current-weather">
+        </div>
+        <dl>
             <dt>Humidity</dt>
             <dd>{{ forecast.main.humidity }}%</dd>
             <dt>High</dt>
@@ -103,7 +101,7 @@ ul {
 }
 li {
   display: inline-block;
-  width: 15%;
+  width: 200px;
   min-height: 300px;
   border: solid 1px #e8e8e8;
   padding: 10px;
@@ -112,6 +110,29 @@ li {
 
 a {
   color: #42b983;
+}
+.weatherSummary {
+  display: inline-block;
+  width: 100px;
+}
+dl {
+  padding: 5px;
+  background: #e8e8e8;
+}
+dt {
+  float: left;
+  clear: left;
+  width: 120px;
+  text-align: right;
+  font-weight: bold;
+  color: blue;
+}
+dd {
+  margin: 0 0 0 130px;
+  padding: 0 0 0.5em 0;
+}
+dt::after {
+  content: ":";
 }
 </style>
 

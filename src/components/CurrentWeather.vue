@@ -6,14 +6,12 @@
       <router-link v-bind:to="{ name: 'Forecast', params: { cityId: $route.params.cityId } }">View 5-Day Forecast</router-link>
     </p>
     <div v-if="weatherData && errors.length===0">
-      <p v-for="weatherSummary in weatherData.weather">
+      <div v-for="weatherSummary in weatherData.weather" class="weatherSummary">
           <img v-bind:src="'http://openweathermap.org/img/w/' + weatherSummary.icon + '.png'" v-bind:alt="weatherSummary.main">
           <br>
           <b>{{ weatherSummary.main }}</b>
-          <br>
-          {{ weatherSummary.description }}
-      </p>
-      <dl class="current-weather">
+      </div>
+      <dl>
           <dt>Current Temp</dt>
           <dd>{{ weatherData.main.temp }}&deg;F</dd>
           <dt>Humidity</dt>
@@ -78,12 +76,34 @@ ul {
 }
 li {
   display: inline-block;
-  width: 20%;
+  width: 300px;
   min-height: 300px;
   border: solid 1px #e8e8e8;
   padding: 10px;
 }
-
+.weatherSummary {
+  display: inline-block;
+  width: 100px;
+}
+dl {
+  padding: 5px;
+  background: #e8e8e8;
+}
+dt {
+  float: left;
+  clear: left;
+  width: 120px;
+  text-align: right;
+  font-weight: bold;
+  color: blue;
+}
+dd {
+  margin: 0 0 0 130px;
+  padding: 0 0 0.5em 0;
+}
+dt::after {
+  content: ":";
+}
 a {
   color: #42b983;
 }
