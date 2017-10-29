@@ -25,3 +25,4 @@ export default new Router({
     }
   ]
 })
+// TODO: Add routes for Current Weather and Forecast views.

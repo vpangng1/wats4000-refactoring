@@ -9,11 +9,13 @@
     <ul v-if="weatherData && errors.length===0" class="forecast">
       <li v-for="forecast in weatherData.list">
         <h3>{{ forecast.dt|formatDate }}</h3>
+        <!-- TODO: Make weather summary be in a child component. -->
         <div v-for="weatherSummary in forecast.weather" class="weatherSummary">
             <img v-bind:src="'http://openweathermap.org/img/w/' + weatherSummary.icon + '.png'" v-bind:alt="weatherSummary.main">
             <br>
             <b>{{ weatherSummary.main }}</b>
         </div>
+        <!-- TODO: Make dl of weather data be in a child component. -->
         <dl>
             <dt>Humidity</dt>
             <dd>{{ forecast.main.humidity }}%</dd>
@@ -49,6 +51,7 @@ export default {
     }
   },
   created () {
+    // TODO: Improve base config for API
     axios.get('//api.openweathermap.org/data/2.5/forecast', {
       params: {
           id: this.$route.params.cityId,

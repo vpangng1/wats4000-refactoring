@@ -6,11 +6,14 @@
       <router-link v-bind:to="{ name: 'Forecast', params: { cityId: $route.params.cityId } }">View 5-Day Forecast</router-link>
     </p>
     <div v-if="weatherData && errors.length===0">
+
+      <!-- TODO: Make weather summary be in a child component. -->
       <div v-for="weatherSummary in weatherData.weather" class="weatherSummary">
           <img v-bind:src="'http://openweathermap.org/img/w/' + weatherSummary.icon + '.png'" v-bind:alt="weatherSummary.main">
           <br>
           <b>{{ weatherSummary.main }}</b>
       </div>
+      <!-- TODO: Make dl of weather data be in a child component. -->
       <dl>
           <dt>Current Temp</dt>
           <dd>{{ weatherData.main.temp }}&deg;F</dd>
@@ -47,6 +50,7 @@ export default {
     }
   },
   created () {
+    // TODO: Improve base config for API
     axios.get('//api.openweathermap.org/data/2.5/weather', {
       params: {
           id: this.$route.params.cityId,
