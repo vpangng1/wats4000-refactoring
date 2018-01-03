@@ -29,6 +29,9 @@ the application in the future.
 
 ## Basic Requirements
 
+* Create a software architecture diagram for the system as it exists:
+  * Show each component used in the application.
+  * Indicate relationships between components.
 * Sign up to [OpenWeatherMap.org](https://openweathermap.org/) and generate an API Key.
 * Paste your API Key (which will be used as the `APPID` parameter) into the appropriate locations in the `CitySearch.vue`, `CurrentWeather.vue`, and `Forecast.vue` files.
 * Verify the site works with your key. You should be able to search for a city and see weather data.
@@ -38,6 +41,9 @@ the application in the future.
 * Create a child component called `ErrorList` to handle display of error messages. Replace the error message handling in the templates of the three parent components with this child component.
 * Clean up any extraneous code, comments, or files that are unused.
 * Add comments where they would be helpful to improve the readability of the project.
+* Create a software architecture diagram for the software with revisions:
+  * Show each component used in the application.
+  * Indicate relationships between components.
 
 ## Stretch Goals
 If you crave an extra challenge, attempt these stretch goals:
