@@ -1,0 +1,1 @@
+This is where static assets will be placed.
