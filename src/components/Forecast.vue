@@ -14,20 +14,11 @@
         
         <weather-data v-bind:weatherData="forecast.main"></weather-data>
 
-        <weather-error></weather-error>
+       
 
       </li>
     </ul>
-    <div v-else-if="errors.length > 0">
-      <h2>There was an error fetching weather data.</h2>
-      <ul class="errors">
-        <li v-for="error in errors">{{ error }}</li>
-      </ul>
-    </div>
-    <div v-else>
-      <h2>Loading...</h2>
-    </div>
-  </div>
+     <weather-error></weather-error>
 </template>
 
 <script>
