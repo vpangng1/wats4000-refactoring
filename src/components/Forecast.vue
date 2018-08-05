@@ -14,11 +14,12 @@
         
         <weather-data v-bind:weatherData="forecast.main"></weather-data>
 
-       
+
 
       </li>
     </ul>
      <weather-error></weather-error>
+    </div> 
 </template>
 
 <script>

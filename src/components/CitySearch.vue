@@ -13,10 +13,11 @@
             
             <weather-data v-bind:weatherData="city.main"></weather-data>
             
-            
+
         </li>
     </ul>
     <weather-error></weather-error>
+  </div>
 </template>
 
 <script>

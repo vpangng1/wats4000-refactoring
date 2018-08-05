@@ -16,6 +16,7 @@
    
     </div>
     <weather-error></weather-error>
+  </div>
 </template>
 
 <script>
