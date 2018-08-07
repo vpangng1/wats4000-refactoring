@@ -12,11 +12,14 @@
             <weather-summary v-bind:weatherData="city.weather"></weather-summary>
             
             <weather-data v-bind:weatherData="city.main"></weather-data>
-            
+
+            <weather-error v-bind:errors="errors"></weather-error>
 
         </li>
     </ul>
-    <weather-error></weather-error>
+
+            
+
   </div>
 </template>
 

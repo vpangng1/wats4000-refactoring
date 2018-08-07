@@ -1,10 +1,9 @@
 <template> 
-<div if="errors.length > 0">
+  <div if="errors.length > 0">
       <h2>There was an error fetching weather data.</h2>
       <ul class="errors">
         <li v-for="error in errors">{{ error }}</li>
       </ul>
-    </div>
   </div>
 </template>
 
@@ -17,7 +16,7 @@ export default {
     }
   },
 props: {
-    weatherData: []
+    errors: []
   }
 }
 </script>
